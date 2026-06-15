@@ -1,0 +1,24 @@
+[
+  {
+    "timestamp": "2026-06-15T21:01:44.000000",
+    "site_id": "kilnbeck",
+    "kind": "correction",
+    "content": {
+      "question": "The data shows activity outside the operating hours you described (The data shows significant consumption on evenings and weekends, but site notes state nothing runs then.). Can you confirm what runs then, so I don't count legitimate work as waste?",
+      "answer": "Ah \u2014 yes, we do brew some Friday evenings. Forgot about that."
+    }
+  },
+  {
+    "timestamp": "2026-06-15T21:01:45.000000",
+    "site_id": "kilnbeck",
+    "kind": "finding",
+    "content": {
+      "what": "Cold store refrigeration system wasting energy",
+      "evidence": "Refrigeration load was 10.9 kW from Dec 2024 to Feb 15, 2026, then dropped to 3.5 kW after contractor work, but reverted back to 8.3 kW on April 1, 2026.",
+      "value_range_gbp_yr": "\u00a316,206 - \u00a318,177",
+      "assumptions": "Fixed tariff of 25p/kWh, continuous 7.4 kW (winter) to 8.3 kW (spring) excess load.",
+      "confidence": "high",
+      "action": "Investigate cold store controls with refrigeration contractor, address the regression that occurred on April 1, 2026."
+    }
+  }
+]

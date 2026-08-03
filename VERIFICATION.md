@@ -15,6 +15,8 @@ python3 verification_dashboard.py --json
 python3 verification_dashboard.py --export verification/index.html
 ```
 
+CI runs the same checks and uploads `kilnbeck-verification-dashboard`, a self-contained HTML snapshot plus the JSON evidence report.
+
 ## Status meanings
 
 - **Verified:** executable evidence passed.

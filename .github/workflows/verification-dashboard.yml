@@ -1,0 +1,31 @@
+name: Verification dashboard
+
+on:
+  push:
+    branches: [main, feat/verification-dashboard]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run verification tests
+        run: python -m unittest discover -s tests -v
+      - name: Generate machine-readable report
+        run: python verification_dashboard.py --json > verification-report.json
+      - name: Generate self-contained UI
+        run: python verification_dashboard.py --export verification/index.html
+      - name: Upload verification UI
+        uses: actions/upload-artifact@v4
+        with:
+          name: kilnbeck-verification-dashboard
+          path: |
+            verification/index.html
+            verification-report.json
